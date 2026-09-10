@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ARCHIVE // INDEX</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background:
+        radial-gradient(circle at 20% 10%, #211712 0%, transparent 35%),
+        radial-gradient(circle at 80% 90%, #18100d 0%, transparent 35%),
+        #090706;
+    color: #c9bda9;
+    font-family: Georgia, "Times New Roman", serif;
+    min-height: 100vh;
+}
+
+/* paper-like overlay */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: .08;
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 3px,
+            #c5a889 4px
+        );
+}
+
+/* main frame */
+
+.archive {
+    width: min(900px, 92%);
+    margin: 45px auto;
+    border: 1px solid #49352a;
+    position: relative;
+    background: rgba(12, 9, 7, .88);
+    box-shadow:
+        0 0 0 7px rgba(67, 47, 37, .08),
+        0 0 60px rgba(0, 0, 0, .7);
+}
+
+/* corner ornaments */
+
+.archive::before,
+.archive::after {
+    content: "◇";
+    position: absolute;
+    color: #8b5d43;
+    font-size: 16px;
+}
+
+.archive::before {
+    top: 10px;
+    left: 12px;
+}
+
+.archive::after {
+    bottom: 10px;
+    right: 12px;
+}
+
+.inner {
+    padding: 55px 30px;
+}
+
+@media (min-width: 650px) {
+    .inner {
+        padding: 70px 70px;
+    }
+}
+
+/* header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    border-bottom: 1px solid #392a22;
+    padding-bottom: 18px;
+}
+
+.code {
+    color: #8f6148;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.status {
+    color: #675548;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-align: right;
+}
+
+/* title */
+
+.kicker {
+    margin-top: 65px;
+    color: #7e5945;
+    letter-spacing: 6px;
+    font-size: 11px;
+}
+
+h1 {
+    margin: 12px 0;
+    color: #d9c8ae;
+    font-size: clamp(45px, 11vw, 92px);
+    letter-spacing: 7px;
+    line-height: .9;
+    font-weight: normal;
+}
+
+h1 span {
+    color: #713c35;
+}
+
+.subtitle {
+    color: #8d7964;
+    font-size: 13px;
+    letter-spacing: 3px;
+}
+
+/* ornament */
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 38px 0;
+    color: #80563f;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    height: 1px;
+    background: #3c2b23;
+    flex: 1;
+}
+
+/* body */
+
+.text {
+    max-width: 650px;
+    color: #aa9a84;
+    line-height: 2;
+    font-size: 15px;
+}
+
+.drop {
+    float: left;
+    color: #87483b;
+    font-size: 48px;
+    line-height: .75;
+    padding-right: 7px;
+}
+
+/* warning */
+
+.warning {
+    margin: 45px 0;
+    padding: 18px 20px;
+    border-top: 1px solid #56342e;
+    border-bottom: 1px solid #56342e;
+    color: #a45c50;
+    letter-spacing: 3px;
+    font-size: 11px;
+    text-align: center;
+}
+
+/* fake record table */
+
+.records {
+    margin-top: 50px;
+    border: 1px solid #342720;
+}
+
+.record {
+    display: grid;
+    grid-template-columns: 55px 1fr auto;
+    gap: 15px;
+    padding: 17px;
+    border-bottom: 1px solid #2a201b;
+    color: #756557;
+    font-size: 11px;
+}
+
+.record:last-child {
+    border-bottom: none;
+}
+
+.record-number {
+    color: #8c4b3d;
+}
+
+.record-name {
+    color: #9b8b77;
+}
+
+.missing {
+    color: #69453c;
+    font-style: italic;
+}
+
+/* source hint */
+
+.source-box {
+    margin-top: 50px;
+    padding: 22px;
+    background: #0f0b09;
+    border-left: 2px solid #704238;
+}
+
+.source-box small {
+    color: #674e42;
+    letter-spacing: 2px;
+}
+
+.source-box p {
+    color: #817263;
+    line-height: 1.8;
+    font-size: 12px;
+}
+
+/* footer */
+
+.footer {
+    margin-top: 65px;
+    padding-top: 20px;
+    border-top: 1px solid #30231d;
+    display: flex;
+    justify-content: space-between;
+    color: #55463b;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="archive">
+
+<div class="inner">
+
+    <div class="header">
+        <div class="code">
+            G.H.A // 000
+        </div>
+
+        <div class="status">
+            STATUS: UNSTABLE
+        </div>
+    </div>
+
+
+    <div class="kicker">
+        GRAND HISTORICAL ARCHIVE
+    </div>
+
+    <h1>
+        THE <span>INDEX</span>
+    </h1>
+
+    <div class="subtitle">
+        A CATALOGUE OF RECOVERED HISTORY
+    </div>
+
+
+    <div class="divider">
+        ◇
+    </div>
+
+
+    <p class="text">
+        <span class="drop">S</span>
+        even historical records were once stored beneath
+        this catalogue. Their shelves remain. Their numbers
+        remain. Their contents do not.
+    </p>
+
+    <p class="text">
+        The archivist believed that everything could be
+        preserved if it was given a number.
+    </p>
+
+    <p class="text">
+        He was wrong.
+    </p>
+
+
+    <div class="warning">
+        DO NOT TRUST THE INDEX.
+    </div>
+
+
+    <div class="records">
+
+        <div class="record">
+            <div class="record-number">001</div>
+            <div class="record-name">THE FIRST EMPEROR</div>
+            <div class="missing">RECOVERED</div>
+        </div>
+
+        <div class="record">
+            <div class="record-number">002</div>
+            <div class="record-name">[ REDACTED ]</div>
+            <div class="missing">MISSING</div>
+        </div>
+
+        <div class="record">
+            <div class="record-number">003</div>
+            <div class="record-name">[ REDACTED ]</div>
+            <div class="missing">MISSING</div>
+        </div>
+
+        <div class="record">
+            <div class="record-number">004</div>
+            <div class="record-name">[ REDACTED ]</div>
+            <div class="missing">MISSING</div>
+        </div>
+
+        <div class="record">
+            <div class="record-number">005</div>
+            <div class="record-name">[ REDACTED ]</div>
+            <div class="missing">MISSING</div>
+        </div>
+
+        <div class="record">
+            <div class="record-number">006</div>
+            <div class="record-name">[ REDACTED ]</div>
+            <div class="missing">MISSING</div>
+        </div>
+
+        <div class="record">
+            <div class="record-number">007</div>
+            <div class="record-name">[ REDACTED ]</div>
+            <div class="missing">MISSING</div>
+        </div>
+
+    </div>
+
+
+    <div class="source-box">
+
+        <small>
+            ARCHIVIST'S NOTE // 07
+        </small>
+
+        <p>
+            Some records were removed from the catalogue
+            without removing their numbers.
+        </p>
+
+        <p>
+            Numbers are obedient things.
+            They stay where they are placed.
+        </p>
+
+        <p>
+            People are less obedient.
+        </p>
+
+    </div>
+
+
+    <div class="divider">
+        · · ·
+    </div>
+
+
+    <p class="text">
+        The first record concerns a ruler who believed
+        that even death could be organized.
+    </p>
+
+    <p class="text">
+        His name survives.
+        His empire does not.
+    </p>
+
+
+    <div class="footer">
+        <span>PROPERTY OF THE ARCHIVE</span>
+        <span>PAGE 01 / 07</span>
+    </div>
+
+</div>
+</div>
+
+
+<!--
+====================================================================
+ARCHIVE SOURCE // INDEX
+====================================================================
+
+If you are reading this, you have already ignored the surface.
+
+Good.
+
+The visible catalogue is incomplete.
+
+The actual route was divided into three pieces.
+
+Do not read the pieces as prose.
+
+Read them as architecture.
+
+--------------------------------------------------------------------
+
+FRAGMENT A
+
+001
+
+--------------------------------------------------------------------
+
+FRAGMENT B
+
+.html
+
+--------------------------------------------------------------------
+
+FRAGMENT C
+
+archive/
+
+--------------------------------------------------------------------
+
+The archivist wrote them in the wrong order.
+
+Or perhaps someone wanted you to believe that.
+
+There is no "next page" button.
+
+There was never supposed to be one.
+
+A path has no meaning until its pieces are placed correctly.
+
+====================================================================
+IDENTIFICATION FRAGMENT
+====================================================================
+
+A small number was found underneath the catalogue seal.
+
+18
+
+The archivist called it "the first mark."
+
+He never explained why.
+
+====================================================================
+SECOND NOTE
+====================================================================
+
+21
+
+The ink was different.
+
+====================================================================
+THIRD NOTE
+====================================================================
+
+22
+
+The paper was newer.
+
+====================================================================
+
+Three marks.
+
+Not a date.
+
+Not an inventory number.
+
+Keep them.
+
+====================================================================
+END SOURCE
+====================================================================
+-->
+</body>
+  </html>
